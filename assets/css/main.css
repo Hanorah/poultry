@@ -1,7 +1,7 @@
 
 
 .breadcrumb-bg {
-  background-image: url(../images/Product\ 10a.jpg);
+  background-image: url(../images/logo.png);
 }
 
 .breadcrumb-text p {
@@ -36,7 +36,7 @@
   width: 100%;
   height: 100%;
   content: "";
-  background-color: #07212e8e;
+  background-color: #000000ef;
   z-index: -1;
   opacity: 0.8;
 
