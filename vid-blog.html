@@ -676,88 +676,8 @@
 
         }
 
-        /******* Middle section CSS Start ******/
-        /* -------- Landing page ------- */
-        .game-section {
-            padding: 60px 50px;
-        }
 
-        .game-section .owl-stage {
-            margin: 15px 0;
-            display: flex;
-            display: -webkit-flex;
-        }
 
-        .game-section .item {
-            margin: 0 15px 60px;
-            width: 320px;
-            height: 400px;
-            display: flex;
-            display: -webkit-flex;
-            align-items: flex-end;
-            -webkit-align-items: flex-end;
-            background: #343434 no-repeat center center / cover;
-            border-radius: 16px;
-            overflow: hidden;
-            position: relative;
-            transition: all 0.4s ease-in-out;
-            -webkit-transition: all 0.4s ease-in-out;
-            cursor: pointer;
-        }
-
-        .game-section .item.active {
-            width: 500px;
-            box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
-            -webkit-box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
-        }
-
-        .game-section .item:after {
-            content: "";
-            display: block;
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            left: 0;
-            top: 0;
-            background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
-        }
-
-        .game-section .item-desc {
-            padding: 0 24px 12px;
-            color: #fff;
-            position: relative;
-            z-index: 1;
-            overflow: hidden;
-            transform: translateY(calc(100% - 54px));
-            -webkit-transform: translateY(calc(100% - 54px));
-            transition: all 0.4s ease-in-out;
-            -webkit-transition: all 0.4s ease-in-out;
-        }
-
-        .game-section .item.active .item-desc {
-            transform: none;
-            -webkit-transform: none;
-        }
-
-        .game-section .item-desc p {
-            opacity: 0;
-            -webkit-transform: translateY(32px);
-            transform: translateY(32px);
-            transition: all 0.4s ease-in-out 0.2s;
-            -webkit-transition: all 0.4s ease-in-out 0.2s;
-        }
-
-        .game-section .item.active .item-desc p {
-            opacity: 1;
-            -webkit-transform: translateY(0);
-            transform: translateY(0);
-        }
-
-        .game-section .owl-theme.custom-carousel .owl-dots {
-            margin-top: -20px;
-            position: relative;
-            z-index: 5;
-        }
 
         /******** Middle section CSS End *******/
 
@@ -774,25 +694,7 @@
                 line-height: 32px;
             }
 
-            /* -------- Landing page ------- */
-            .game-section {
-                padding: 50px 30px;
-            }
 
-            .game-section .item {
-                margin: 0 12px 60px;
-                width: 260px;
-                height: 360px;
-            }
-
-            .game-section .item.active {
-                width: 400px;
-            }
-
-            .game-section .item-desc {
-                transform: translateY(calc(100% - 46px));
-                -webkit-transform: translateY(calc(100% - 46px));
-            }
         }
 
         @media (min-width: 768px) and (max-width: 991px) {
@@ -810,25 +712,7 @@
                 width: 330px;
             }
 
-            /* -------- Landing page ------- */
-            .game-section {
-                padding: 50px 30px 40px;
-            }
 
-            .game-section .item {
-                margin: 0 12px 60px;
-                width: 240px;
-                height: 330px;
-            }
-
-            .game-section .item.active {
-                width: 360px;
-            }
-
-            .game-section .item-desc {
-                transform: translateY(calc(100% - 42px));
-                -webkit-transform: translateY(calc(100% - 42px));
-            }
         }
 
         @media (max-width: 767px) {
@@ -850,28 +734,7 @@
                 width: 250px;
             }
 
-            /* -------- Landing page ------- */
-            .game-section {
-                padding: 30px 15px 20px;
-            }
 
-            .game-section .item {
-                margin: 0 10px 40px;
-                width: 200px;
-                height: 280px;
-            }
-
-            .game-section .item.active {
-                width: 270px;
-                box-shadow: 6px 10px 10px rgba(0, 0, 0, 0.25);
-                -webkit-box-shadow: 6px 10px 10px rgba(0, 0, 0, 0.25);
-            }
-
-            .game-section .item-desc {
-                padding: 0 14px 5px;
-                transform: translateY(calc(100% - 42px));
-                -webkit-transform: translateY(calc(100% - 42px));
-            }
         }
     </style>
 </head>
@@ -930,337 +793,420 @@
                 <div class="row">
                     <div class="col-lg-8 offset-lg-2 text-center">
                         <div class="breadcrumb-text">
-                            <p style="font-size: 2em; font-weight: 800; color: rgb(255, 255, 255);">Quality Products</p>
-                            <h1 style="color: #45bb45;">About Us</h1>
+                            <p style="font-size: 2em; font-weight: 800; color: rgb(255, 255, 255);">Unigold Foods</p>
+                            <h1 style="color: #45bb45;">Vlog</h1>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- end breadcrumb section -->
-
-        <!-- featured section -->
-        <div class="feature-bg">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-7">
-                        <div class="featured-text">
-                            <h1 style="font-size: 3em;">WHY <br><span class="orange-text"
-                                    style="color: green; ">UNIGOLD</span> FOODS
-                            </h1>
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6 mb-4 mb-md-5">
-                                    <div class="list-box d-flex">
-                                        <div class="list-icon">
-                                            <i class="fas fa-shipping-fast"></i>
-                                        </div>
-                                        <div class="content">
-                                            <h3>Nationwide Delivery</h3>
-                                            <p>We offer reliable and fast delivery across Nigeria, ensuring that your
-                                                favorite food products reach you no matter where you are.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6 mb-5 mb-md-5">
-                                    <div class="list-box d-flex">
-                                        <div class="list-icon">
-                                            <i class="fas fa-cogs"></i>
-                                        </div>
-                                        <div class="content">
-                                            <h3>Premium Quality</h3>
-                                            <p>At Unigold Foods, we prioritize quality, offering you top-tier products
-                                                that meet international standards for taste and freshness.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6 mb-5 mb-md-5">
-                                    <div class="list-box d-flex">
-                                        <div class="list-icon">
-                                            <i class="fas fa-users"></i>
-                                        </div>
-                                        <div class="content">
-                                            <h3>Community Impact</h3>
-                                            <p>We support local farmers through our contact farming programs,
-                                                contributing to community growth and sustainable livelihoods.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="list-box d-flex">
-                                        <div class="list-icon">
-                                            <i class="fas fa-headset"></i>
-                                        </div>
-                                        <div class="content">
-                                            <h3>Customer Support</h3>
-                                            <p>Our dedicated customer service team is available to assist you with any
-                                                inquiries, ensuring your experience with us is seamless and enjoyable.
-                                            </p>
-                                        </div>
-
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div class="container">
+            <div class="intro-section" style="margin-top: 2em;">
+                <h1>UNIGOLD </h1>
+                <p>Welcome to Our Vlog, your go-to source for updates, insights, and behind-the-scenes stories from
+                    Unigold Foods.</p>
+                <a href="#" class="cta-button">Stay tuned and be inspired!</a>
             </div>
-        </div>
-        <!-- end featured section -->
 
-
-        <div class="about-section">
-            <div class="about-text">
-                <h1>Unigold Foods </h1>
-                <h2 style="margin-top: 2em;">Our Business and Operations</h2>
-                <p>
-                    Poultry and Eggs Production
-                    Unigold Foods’ poultry division contributes significantly to the company, accounting for 75% of the
-                    food processing business. Our operations span the entire poultry supply chain, from upstream to
-                    downstream activities. The key products in our poultry business include:
-
-                    Day-old chicks
-                    Frozen packaged chicken (marketed under the Nara brand)
-                    Table eggs (marketed under the Nara brand)
-                    We take pride in the quality of our products. Our layers are raised from birds hatched within our
-                    own facilities, ensuring the highest quality eggs under the Nara brand. We currently have an
-                    installed capacity of producing 1,000 crates of eggs daily, sourced from both our domestic
-                    production and contract farmers.
-
-                    Unigold Foods operates a modern hatchery system, which is used to produce healthy day-old chicks,
-                    ensuring quality incubation for raising broilers and layers. We use high-quality natural feed
-                    produced at our own feed mill, ensuring our chickens are raised in the best possible conditions.
-                    Approximately 75% of our chickens are grown by our contract farmers.
-
-                    To meet growing demand, Unigold Foods is working to increase its processing capacity to 5,000 birds
-                    per hour by 2030. Our vision is to become the largest chicken processing and packaging company in
-                    Nigeria within the next 10 years, with an ambitious target of increasing broiler production by 20%
-                    annually.
-                </p>
-                <a href="about.html" class="button-3d"> Learn More<i class="fas fa-arrow-right"></i></a>
-            </div>
-            <div class="about-image">
-                <img src="assets/images/uu.jpg" alt="Unigold Foods Products">
-            </div>
-        </div>
-        <section class="company-vision">
-            <h2 class="pb-3 text-center">OUR MISSION, <b style="color: green;">VISION,</b> CORE VALUES <b
-                    style="color: green;">&</b> PURPOSE</h2>
-            <div class="row">
-                <!-- Mission Card -->
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="glass-card">
-                        <h3>Our Mission</h3>
-                        <p>We envision a country where every Nigerian and African can afford animal protein products,
-                            from poultry, beef, pork to fish products, while ensuring all farmers are well compensated
-                            and live prosperously.</p>
-                    </div>
-                </div>
-
-                <!-- Vision Card -->
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="glass-card">
-                        <h3>Our Vision</h3>
-                        <p>Our strategy focuses on being an agro-integrator, virtually integrating operations to produce
-                            animal protein and food products of the highest quality at the most affordable prices,
-                            serving our people and community.</p>
-                    </div>
-                </div>
-
-                <!-- Core Values Card -->
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="glass-card">
-                        <h3>Core Values</h3>
-                        <p>Our core values are the heart of everything we do. We are committed to fair wages for
-                            workers, giving back to communities, producing wholesome products, and maintaining a high
-                            standard of integrity and respect in all operations.</p>
-                    </div>
-                </div>
-
-                <!-- Purpose Card -->
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="glass-card">
-                        <h3>Our Purpose</h3>
-                        <p>Unigold Foods strives to create value for our stakeholders – farmers, vendors, customers,
-                            team members, and the community – by upholding ethical principles, providing a safe working
-                            environment, and safeguarding the production of quality food products.</p>
-                    </div>
-                </div>
-
-                <!-- Strategy Card -->
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="glass-card">
-                        <h3>Our Strategy</h3>
-                        <p>Our strategy is focused on innovation, growth, and efficiency, enabling Unigold Foods to
-                            become a leader in sustainable food processing across Nigeria and Africa.</p>
-                    </div>
-                </div>
-
-                <!-- Ambition Card -->
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="glass-card">
-                        <h3>Our Ambition</h3>
-                        <p>Unigold Foods aspires to be a leading, innovation-driven, and sustainable food processing
-                            company in Nigeria and Africa, committed to expansion and delivering the highest quality
-                            products to the people.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <style>
-            .company-vision {
-                padding: 50px 0;
-                background-color: #f8f8f8;
-            }
-
-            .company-vision h2 {
-                font-size: 2.5em;
-                color: #333;
-                margin-bottom: 40px;
-            }
-
-            .glass-card {
-                background: rgba(255, 255, 255, 0.3);
-                backdrop-filter: blur(10px);
-                padding: 20px;
-                border-radius: 15px;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-                text-align: center;
-                transition: all 0.3s ease-in-out;
-            }
-
-            .glass-card:hover {
-                transform: translateY(-10px);
-                box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-            }
-
-            .glass-card h3 {
-                font-size: 1.8em;
-                color: #333;
-                margin-bottom: 20px;
-            }
-
-            .glass-card p {
-                font-size: 1em;
-                color: #555;
-            }
-
-            @media (max-width: 767px) {
-                .company-vision h2 {
-                    font-size: 2em;
-                }
-
-                .glass-card h3 {
-                    font-size: 1.5em;
-                }
-
-                .glass-card p {
-                    font-size: 0.9em;
-                }
-            }
-        </style>
-        <div class="image-text-wrapper">
-            <div class="content-wrapper">
-                <img src="assets/images/Product 1.jpg" alt="Image of Unigold Foods" class="left-image">
-                <div class="right-text">
-                    <h1 style="margin-top: 0.5em;">Independent Local Producers</h1>
-                    <p>At Unigold Foods, we are committed to sourcing high-quality broilers and eggs from independent
-                        local producers. Our partnerships with local family farmers ensure the highest standards of
-                        animal husbandry and environmental practices. These relationships not only benefit our
-                        operations but also contribute significantly to the economic success of rural communities across
-                        Nigeria.</p>
-                    <p>By purchasing livestock from a variety of local suppliers, we support local economies, decrease
-                        our carbon footprint, and promote sustainability. Our chicken and beef production facilities are
-                        strategically located in areas where livestock is raised, allowing us to buy locally and support
-                        the economic viability of surrounding communities.</p>
-                    <h3>Tomato Paste - Nara</h3>
-                    <p>Unigold Foods has made significant strides in the tomato paste market with our Nara brand. Since
-                        its introduction in 2013, Nara tomato paste has been a staple in Nigerian kitchens, helping
-                        families make healthy, fresh stews and meals. All tomatoes used for our paste are sourced from
-                        cooperative farming in Kano and Benue States, ensuring freshness and quality.</p>
-                    <h3>Red Palm Oil - Nara</h3>
-                    <p>Unigold Foods is also involved in the production of high-quality red palm oil, sourced from
-                        cooperatives and farmers in Edo, Delta, Abia, and Imo States. Our partnerships with smallholder
-                        oil palm farmers create economic opportunities for low-income Nigerians, providing them with a
-                        sustainable livelihood.</p>
-                    <h3>Sustainability and Environmental Responsibility</h3>
-                    <p>At Unigold Foods, sustainability is a core principle. We are committed to responsible
-                        environmental, social, and economic practices that will benefit both current and future
-                        generations.</p>
-
-                </div>
-            </div>
         </div>
         <style>
-            .image-text-wrapper {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 20px;
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
             }
 
-            .content-wrapper {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: center;
-            }
-
-            .left-image {
-                width: 40%;
-                height: auto;
-                margin-right: 20px;
-                border-radius: 10px;
-            }
-
-            .right-text {
-                width: 55%;
-            }
-
-            h1,
-            h2,
-            h3 {
-                color: #333;
-            }
-
-            p {
-                color: #666;
+            body {
+                font-family: Arial, sans-serif;
+                color: #000;
+                background-color: #fff;
                 line-height: 1.6;
             }
 
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 20px;
+            }
+
+            .intro-section {
+                margin-bottom: 40px;
+            }
+
+            .intro-section h1 {
+                font-size: 3rem;
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+
+            .intro-section p {
+                font-size: 1rem;
+                max-width: 600px;
+                margin-bottom: 20px;
+            }
+
+            .cta-button {
+                display: inline-block;
+                padding: 10px 20px;
+                background-color: #000;
+                color: #fff;
+                text-decoration: none;
+                font-weight: bold;
+                border-radius: 5px;
+            }
+
+            .grid-container {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+
+            }
+
+            .grid-item {
+                position: relative;
+                overflow: hidden;
+                border-radius: 10px;
+            }
+
+            .grid-item img {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+
+            .overlay {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background: rgba(0, 0, 0, 0.6);
+                color: #fff;
+                padding: 20px;
+            }
+
+            .overlay h2 {
+                font-size: 1.2rem;
+                margin: 0;
+            }
+
+            .posted-by {
+                font-size: 0.8rem;
+                margin-bottom: 5px;
+            }
+
+            /* Responsive Adjustments */
+            @media (max-width: 1024px) {
+                .grid-container {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+
+                .intro-section h1 {
+                    font-size: 2.5rem;
+                }
+            }
+
             @media (max-width: 768px) {
-                .content-wrapper {
-                    flex-direction: column;
+                .grid-container {
+                    grid-template-columns: 1fr;
+                }
+
+                .intro-section h1 {
+                    font-size: 2rem;
+                }
+
+                .intro-section p {
+                    font-size: 0.9rem;
+                }
+
+                .cta-button {
+                    width: 100%;
                     text-align: center;
                 }
+            }
 
-                .left-image {
-                    width: 80%;
-                    margin: 0 auto 20px;
+            .containery {
+                /* CHANGE TO GRID */
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                justify-items: center;
+                grid-gap: 20px;
+                width: 940px;
+                max-width: 100%;
+                margin: auto;
+            }
+
+            .cardy {
+                background-color: #fff;
+                border-radius: 10px;
+                box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+                overflow: hidden;
+                width: 300px;
+            }
+
+            .card-headery img {
+                object-fit: cover;
+                height: 200px;
+                width: 100%;
+            }
+
+            .card-bodyy {
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                padding: 20px;
+                min-height: 250px;
+            }
+
+            .card-bodyy h4 {
+                margin: 10px 0;
+            }
+
+            .card-bodyy p {
+                font-size: 13px;
+                margin: 0 0 40px;
+            }
+
+            .tag {
+                background-color: #fff;
+                border-radius: 50px;
+                font-size: 12px;
+                color: #fff;
+                margin: 0;
+                padding: 2px 10px;
+                text-transform: uppercase;
+            }
+
+            .tag-teal {
+                background-color: #92d4e4;
+            }
+
+            .tag-purple {
+                background-color: #3d1d94;
+            }
+
+            .tag-pink {
+                background-color: #c62bcb;
+            }
+
+            .user {
+                display: flex;
+                margin-top: auto;
+            }
+
+            .user img {
+                border-radius: 50%;
+                margin-right: 10px;
+                height: 40px;
+                width: 40px;
+            }
+
+            .user-info h5 {
+                margin: 0;
+            }
+
+            .user-info small {
+                color: #888785;
+            }
+
+            @media (max-width: 940px) {
+                .container {
+                    grid-template-columns: 1fr;
+                }
+            }
+
+            /* Basic layout for larger screens (desktop) */
+            .containery {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                gap: 2em;
+            }
+
+            .cardy {
+                width: 30%;
+                /* Three cards per row on large screens */
+                margin-bottom: 2em;
+            }
+
+            .card-headery video {
+                width: 100%;
+                height: auto;
+            }
+
+            .card-bodyy {
+                padding: 1em;
+            }
+
+            .card-bodyy .tag {
+                display: inline-block;
+                margin-bottom: 10px;
+            }
+
+            .card-bodyy a h4 {
+                font-size: 1.2em;
+                margin: 10px 0;
+            }
+
+            .card-bodyy p {
+                font-size: 1em;
+                margin: 10px 0;
+            }
+
+            .user {
+                display: flex;
+                align-items: center;
+            }
+
+            .user img {
+                border-radius: 50%;
+                width: 40px;
+                height: 40px;
+                margin-right: 10px;
+            }
+
+            .user-info h5 {
+                margin: 0;
+            }
+
+            .user-info small {
+                font-size: 0.9em;
+                color: gray;
+            }
+
+            /* Media query for devices smaller than 1200px (Tablets, Smaller Desktops) */
+            @media screen and (max-width: 1200px) {
+                .cardy {
+                    width: 45%;
+                    /* Two cards per row */
+                }
+            }
+
+            /* Media query for devices smaller than 768px (Mobile Phones, Tablets in Portrait) */
+            @media screen and (max-width: 768px) {
+                .containery {
+                    flex-direction: column;
+                    align-items: center;
                 }
 
-                .right-text {
+                .cardy {
                     width: 100%;
+                    /* One card per row */
                 }
             }
         </style>
+        <div class="containery" style="margin-top: 3em;">
+            <!-- 1st Card -->
+            <div class="cardy">
+                <div class="card-headery">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/1WsTj5sv9nQ?si=wr4gL5MMS63ZFQ4j"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="card-bodyy">
+                    <span class="tag tag-purple">MOU</span>
+                    <a href="vlog1.html">
+                        <h4>UNIBEN and Unigold sign multi-billion naira MOU ..</h4>
+                    </a>
+                    <p>Highlights from the signing ceremony...</p>
+                    <div class="user">
+                        <img src="assets/images/corporate-headshots-.jpeg" alt="author-headshot" />
+                        <div class="user-info">
+                            <h5>Ada Eko</h5>
+                            <small>2021</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 2nd Card -->
+            <div class="cardy">
+                <div class="card-headery">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/05BF4BFJAu8?si=iW0srBY9InQ-qqWt"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="card-bodyy">
+                    <span class="tag tag-purple">Inspection</span>
+                    <a href="vlog2.html">
+                        <h4>Unigold Foods Inspection On Uniben Farms</h4>
+                    </a>
+                    <p>An in-depth look at Unigold Foods' recent farm inspections.</p>
+                    <div class="user">
+                        <img src="assets/images/corporate-headshots-.jpeg" alt="author-headshot" />
+                        <div class="user-info">
+                            <h5>Ada Eko</h5>
+                            <small>2022</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3rd Card -->
+            <div class="cardy">
+                <div class="card-headery">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Ju3BO4s5rUg?si=HvxsiDvAHWE1CSzg"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="card-bodyy">
+                    <span class="tag tag-purple">Promotional</span>
+                    <a href="vlog3.html">
+                        <h4>Unigold Foods Ltd-University of Benin Poultry Promotional Video</h4>
+                    </a>
+                    <p>A promotional overview of the Unigold Foods and University of Benin partnership.</p>
+                    <div class="user">
+                        <img src="assets/images/corporate-headshots-.jpeg" alt="author-headshot" />
+                        <div class="user-info">
+                            <h5>Ada Eko</h5>
+                            <small>2022</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4th Card -->
+            <div class="cardy">
+                <div class="card-headery">
+                    <iframe width="660" height="315" src="https://www.youtube.com/embed/1HLTp66iEug?si=e4hMsZS15m76K4In"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="card-bodyy">
+                    <span class="tag tag-pink">Construction</span>
+                    <a href="vlog4.html">
+                        <h4>Unigold Foods Ltd Pre-Advance Construction Team on the 27th of August</h4>
+                    </a>
+                    <p>Pre-construction highlights from the team’s visit.</p>
+                    <div class="user">
+                        <img src="assets/images/corporate-headshots-.jpeg" alt="author-headshot" />
+                        <div class="user-info">
+                            <h5>Ada Eko</h5>
+                            <small>27 Aug 2024</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
-        <div class="contact-banner">
-            <div class="overlays"></div>
+        <div class="contact-banner" style="margin-top: 2em;">
             <div class="contact-content">
                 <h2>Stay Updated!</h2>
-                <p>Got any Questions?.</p>
+                <p>Subscribe to our newsletter for the latest updates.</p>
                 <button id="contactButton">Contact Us</button>
             </div>
         </div>
 
+
+
         <div class="contact-form-menu" id="contactFormMenu" style="margin-top: 2.5em;">
             <div class="contact-form-container">
-                <h2>Do you have any questions?</h2>
+                <h2>Have you any question?</h2>
                 <p>If you have any inquiries or need more information about our products and services, feel free to
                     contact us. We are happy to assist you!</p>
-
 
                 <form class="contact-form">
                     <div class="form-group">
@@ -1407,21 +1353,13 @@
         </style>
 
 
-
-
-
-
-
-
-
         <footer class="footer">
             <div class="footer-container">
                 <div class="footer-columns">
                     <!-- About Us Section -->
                     <div class="footer-column">
-                        <h3 style="color: white;">Our Mission</h3>
-                        <p style="color: white;">At Unigold Foods, our mission is to provide high-quality, sustainable
-                            food products that
+                        <h3>Our Mission</h3>
+                        <p>At Unigold Foods, our mission is to provide high-quality, sustainable food products that
                             support local farmers and contribute to the well-being of our communities. We strive to be a
                             leader in the Nigerian food industry by innovating and maintaining ethical business
                             practices.</p>
@@ -1429,7 +1367,7 @@
 
                     <!-- Services Section -->
                     <div class="footer-column">
-                        <h3 style="color: white;">Our Services</h3>
+                        <h3>Our Services</h3>
                         <ul>
                             <li><span class="arrow">&rarr;</span> Sustainable Livestock Sourcing</li>
                             <li><span class="arrow">&rarr;</span> High-Quality Tomato Paste Production</li>
@@ -1459,6 +1397,7 @@
 
 
 
+
         <div class="arrow-box" onclick="scrollToTop()">
             <div class="arrow-up"></div>
         </div>
@@ -1467,172 +1406,171 @@
             <i class="fab fa-whatsapp"></i>
         </div>
 
-</body>
-</div>
+    </div>
 
-<script>
-    // script.js
+    <script>
+        // script.js
 
-    window.addEventListener('load', () => {
-        const preloader = document.querySelector('.preloader');
-        const pageContent = document.querySelector('.page-content');
+        window.addEventListener('load', () => {
+            const preloader = document.querySelector('.preloader');
+            const pageContent = document.querySelector('.page-content');
 
-        if (preloader && pageContent) {
-            setTimeout(() => {
-                preloader.style.opacity = '0';
-                preloader.style.transition = 'opacity 1s ease-out'; // Smooth fade-out transition
-
+            if (preloader && pageContent) {
                 setTimeout(() => {
-                    preloader.style.display = 'none';
-                    pageContent.style.display = 'block'; // Show the page content
-                }, 1000); // Match this with the fade-out duration
-            }, 2000); // Preloader duration (3000ms = 3 seconds)
-        } else {
-            console.error('Preloader or page content not found');
-        }
-    });
+                    preloader.style.opacity = '0';
+                    preloader.style.transition = 'opacity 1s ease-out'; // Smooth fade-out transition
 
-    // Open the contact form menu when the button is clicked
-    document.getElementById("contactButton").onclick = function () {
-        document.getElementById("contactFormMenu").classList.add("active");
-    }
-
-    // Open the contact form menu when the link is clicked
-    document.getElementById("contactLink").onclick = function () {
-        document.getElementById("contactFormMenu").classList.add("active");
-    }
-
-    // Close the contact form menu when the close button (X) is clicked
-    document.getElementById("closeForm").onclick = function () {
-        document.getElementById("contactFormMenu").classList.remove("active");
-    }
-
-    // Close the contact form menu when clicking outside of it
-    document.addEventListener('click', (event) => {
-        const contactFormMenu = document.getElementById('contactFormMenu');
-
-        if (!contactFormMenu.contains(event.target) && !document.getElementById('contactButton').contains(event.target) && !document.getElementById('contactLink').contains(event.target)) {
-            if (contactFormMenu.classList.contains('active')) {
-                contactFormMenu.classList.remove('active');
-            }
-        }
-    });
-
-
-
-
-</script>
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const mobileNav = document.getElementById('mobile-nav');
-        const overlay = document.createElement('div');
-        overlay.classList.add('overlay');
-
-        document.body.appendChild(overlay);
-
-        function toggleMobileNav() {
-            if (mobileNav.classList.contains('active')) {
-                mobileNav.classList.remove('active');
-                overlay.classList.remove('active');
+                    setTimeout(() => {
+                        preloader.style.display = 'none';
+                        pageContent.style.display = 'block'; // Show the page content
+                    }, 1000); // Match this with the fade-out duration
+                }, 2000); // Preloader duration (3000ms = 3 seconds)
             } else {
-                mobileNav.classList.add('active');
-                overlay.classList.add('active');
+                console.error('Preloader or page content not found');
             }
+        });
+
+        // Open the contact form menu when the button is clicked
+        document.getElementById("contactButton").onclick = function () {
+            document.getElementById("contactFormMenu").classList.add("active");
         }
 
-        document.querySelector('.hamburger').addEventListener('click', toggleMobileNav);
+        // Open the contact form menu when the link is clicked
+        document.getElementById("contactLink").onclick = function () {
+            document.getElementById("contactFormMenu").classList.add("active");
+        }
 
-        document.querySelector('.close-btn').addEventListener('click', () => {
-            if (mobileNav.classList.contains('active')) {
-                mobileNav.classList.remove('active');
-                overlay.classList.remove('active');
-            }
-        });
+        // Close the contact form menu when the close button (X) is clicked
+        document.getElementById("closeForm").onclick = function () {
+            document.getElementById("contactFormMenu").classList.remove("active");
+        }
 
-        overlay.addEventListener('click', () => {
-            if (mobileNav.classList.contains('active')) {
-                mobileNav.classList.remove('active');
-                overlay.classList.remove('active');
-            }
-        });
-
-        // Close menu when clicking outside
+        // Close the contact form menu when clicking outside of it
         document.addEventListener('click', (event) => {
-            if (!mobileNav.contains(event.target) && !document.querySelector('.hamburger').contains(event.target)) {
+            const contactFormMenu = document.getElementById('contactFormMenu');
+
+            if (!contactFormMenu.contains(event.target) && !document.getElementById('contactButton').contains(event.target) && !document.getElementById('contactLink').contains(event.target)) {
+                if (contactFormMenu.classList.contains('active')) {
+                    contactFormMenu.classList.remove('active');
+                }
+            }
+        });
+
+
+
+
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileNav = document.getElementById('mobile-nav');
+            const overlay = document.createElement('div');
+            overlay.classList.add('overlay');
+
+            document.body.appendChild(overlay);
+
+            function toggleMobileNav() {
+                if (mobileNav.classList.contains('active')) {
+                    mobileNav.classList.remove('active');
+                    overlay.classList.remove('active');
+                } else {
+                    mobileNav.classList.add('active');
+                    overlay.classList.add('active');
+                }
+            }
+
+            document.querySelector('.hamburger').addEventListener('click', toggleMobileNav);
+
+            document.querySelector('.close-btn').addEventListener('click', () => {
                 if (mobileNav.classList.contains('active')) {
                     mobileNav.classList.remove('active');
                     overlay.classList.remove('active');
                 }
-            }
+            });
+
+            overlay.addEventListener('click', () => {
+                if (mobileNav.classList.contains('active')) {
+                    mobileNav.classList.remove('active');
+                    overlay.classList.remove('active');
+                }
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', (event) => {
+                if (!mobileNav.contains(event.target) && !document.querySelector('.hamburger').contains(event.target)) {
+                    if (mobileNav.classList.contains('active')) {
+                        mobileNav.classList.remove('active');
+                        overlay.classList.remove('active');
+                    }
+                }
+            });
         });
-    });
 
 
 
 
 
-    $(".custom-carousel").owlCarousel({
-        autoWidth: true,
-        loop: true
-    });
-    $(document).ready(function () {
-        $(".custom-carousel .item").click(function () {
-            $(".custom-carousel .item").not($(this)).removeClass("active");
-            $(this).toggleClass("active");
+        $(".custom-carousel").owlCarousel({
+            autoWidth: true,
+            loop: true
         });
-    });
-
-
-
-
-
-    function scrollToTop() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
+        $(document).ready(function () {
+            $(".custom-carousel .item").click(function () {
+                $(".custom-carousel .item").not($(this)).removeClass("active");
+                $(this).toggleClass("active");
+            });
         });
-    }
 
 
 
 
 
-
-</script>
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const contactButton = document.getElementById("contactButton");
-        const contactFormMenu = document.getElementById('contactFormMenu');
-
-        if (!contactButton || !contactFormMenu) {
-            console.error('Contact button or form menu not found.');
-            return;
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         }
 
-        // Open contact form menu
-        contactButton.onclick = function () {
-            contactFormMenu.classList.add('active');
-        };
 
-        // Function to close the form
-        function closeForm() {
-            contactFormMenu.classList.remove('active');
-        }
 
-        // Add event listener for clicks outside the container
-        document.addEventListener('click', function (event) {
-            // Check if the click is outside the contactFormMenu and contactButton
-            if (!contactFormMenu.contains(event.target) && !contactButton.contains(event.target)) {
-                closeForm();
+
+
+
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const contactButton = document.getElementById("contactButton");
+            const contactFormMenu = document.getElementById('contactFormMenu');
+
+            if (!contactButton || !contactFormMenu) {
+                console.error('Contact button or form menu not found.');
+                return;
             }
-        });
 
-        // Prevent clicks inside the contactFormMenu from closing the menu
-        contactFormMenu.addEventListener('click', function (event) {
-            event.stopPropagation();
+            // Open contact form menu
+            contactButton.onclick = function () {
+                contactFormMenu.classList.add('active');
+            };
+
+            // Function to close the form
+            function closeForm() {
+                contactFormMenu.classList.remove('active');
+            }
+
+            // Add event listener for clicks outside the container
+            document.addEventListener('click', function (event) {
+                // Check if the click is outside the contactFormMenu and contactButton
+                if (!contactFormMenu.contains(event.target) && !contactButton.contains(event.target)) {
+                    closeForm();
+                }
+            });
+
+            // Prevent clicks inside the contactFormMenu from closing the menu
+            contactFormMenu.addEventListener('click', function (event) {
+                event.stopPropagation();
+            });
         });
-    });
-</script>
+    </script>
 
 
 
