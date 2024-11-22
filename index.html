@@ -1235,7 +1235,7 @@
                 <a href="about.html"><button class="button-3d">Find Out More</button></a>
                 <a href="contact.html"> <button class="button-3d">Buy A Product</button></a>
             </div>
-            <div class="about-image">
+            <div class="abouti-image">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/1WsTj5sv9nQ?si=D71KkGo83S023W-9"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -1245,7 +1245,36 @@
             </div>
         </div>
 
+        <style>
+            .abouti-image {
+                display: flex;
+                /* Use flexbox to enable centering */
+                justify-content: center;
+                /* Horizontally center the content */
+                align-items: center;
+                /* Vertically align the content (optional) */
+                margin: 20px 0;
+                /* Add some spacing around the container */
+            }
 
+            .abouti-image iframe {
+                width: 100%;
+                /* Make the iframe responsive */
+                max-width: 500px;
+                /* Set a maximum width for the iframe */
+                height: auto;
+                /* Maintain aspect ratio */
+                border-radius: 1.5em;
+                /* Add rounded corners */
+            }
+
+            @media (max-width: 768px) {
+                .abouti-image {
+                    margin: 10px 0;
+                    /* Adjust margin for smaller screens */
+                }
+            }
+        </style>
 
 
 
