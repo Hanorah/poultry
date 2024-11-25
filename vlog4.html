@@ -1,0 +1,1420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chicken farm</title>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- owl carousel -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <link rel="stylesheet" href="assets/css/main.css">
+    <!-- responsive -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            overflow-x: hidden;
+            /* Prevent horizontal scroll */
+        }
+
+
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgb(255, 255, 255);
+            /* Optional: adds a white background with slight transparency */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            /* Make sure the preloader is on top of other content */
+        }
+
+        .page-content {
+            display: none;
+            /* Hide content initially */
+        }
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+
+            z-index: 1000;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            text-transform: uppercase;
+            color: #000;
+            font-size: 0.8em;
+            margin: 0 30px;
+        }
+
+        .navbar a:hover {
+            color: green;
+            /* #916E99 */
+        }
+
+
+
+
+        .button-3d {
+            background-color: #226922;
+            /* Button color */
+            color: #fff;
+            font-size: 0.8em;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 5px #2fa00a;
+            /* Shadow for 3D effect */
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .button-3d:hover {
+            background-color: #000000;
+            box-shadow: 0 4px #0d9933;
+            /* Darken shadow on hover */
+        }
+
+        .button-3d:active {
+            transform: translateY(4px);
+            /* Button moves down on click */
+            box-shadow: 0 1px #0ea655;
+            /* Reduced shadow to look pressed */
+        }
+
+
+        /* home section start */
+        :root {
+            --color: #3e991f;
+        }
+
+        body {
+            font-size: 16px;
+            font-family: 'Montserrat', sans-sherif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .content {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .hero {
+            position: relative;
+            background-image: url('assets/images/hero.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            color: white;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .overlays {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.345);
+            /* Adjust the opacity as needed */
+            z-index: 1;
+            /* Ensure the overlay appears above the background */
+        }
+
+        .content {
+            position: relative;
+            z-index: 2;
+            /* Ensure the text content appears above the overlay */
+        }
+
+        .hero h2 {
+            font-size: 4.5rem;
+            margin: 0 0 10px;
+            line-height: 1;
+            color: rgb(255, 255, 255);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.872);
+            line-height: 1.4;
+        }
+
+
+
+
+
+
+
+
+        /* Update this for the hamburger icon */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .hamburger .bar1,
+        .hamburger .bar2,
+        .hamburger .bar3 {
+            width: 25px;
+            height: 3px;
+            background-color: black;
+            margin: 4px 0;
+            transition: 0.3s;
+        }
+
+        /* Transform hamburger into an 'X' */
+        .hamburger.active .bar1 {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+
+        .hamburger.active .bar2 {
+            opacity: 0;
+        }
+
+        .hamburger.active .bar3 {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+
+        /* Mobile menu styles */
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 250px;
+            height: 40vh;
+            /* Only apply border-radius to the left side */
+            border-top-left-radius: 15px;
+            /* Adjust as needed */
+            border-bottom-left-radius: 15px;
+            /* Adjust as needed */
+
+            background-color: rgba(255, 255, 255, 0.959);
+
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+            z-index: 1001;
+            padding-top: 60px;
+            flex-direction: column;
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .mobile-nav.active {
+            display: flex;
+            transform: translateX(0);
+        }
+
+        /* Mobile menu links styles */
+        .mobile-nav a {
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 16px;
+            color: black;
+            display: block;
+        }
+
+        .mobile-nav a:hover {
+            background-color: #ddd;
+        }
+
+        /* Close button */
+        .close-btn {
+            font-size: 3em;
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: #000;
+        }
+
+        /* Overlay styles */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+            /* Hidden by default */
+            z-index: 1000;
+        }
+
+        /* Show overlay when menu is active */
+        .overlay.active {
+            display: block;
+        }
+
+
+
+        @media (max-width: 768px) {
+            .navbar .nav-links {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .home-text {
+                margin-top: 10em;
+            }
+
+        }
+
+        .about-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px;
+            background-color: white;
+        }
+
+        .about-text {
+            position: relative;
+            flex: 1;
+            max-width: 50%;
+            padding-right: 20px;
+
+        }
+
+        .about-text h1 {
+            font-size: 95px;
+            color: #e4e4e4;
+            opacity: 0.7;
+            font-family: 'Barlow Condensed', sans-serif;
+            margin: 0;
+
+        }
+
+        .about-text h2 {
+            font-size: 26px;
+            color: green;
+            font-family: 'Barlow Semi Condensed', sans-serif;
+            position: absolute;
+            top: 20px;
+            left: 0;
+            margin: 0;
+
+        }
+
+        .about-text p {
+            margin: 50px 0;
+            font-size: 16px;
+            color: #000;
+        }
+
+
+
+        .about-image {
+            flex: 1;
+            text-align: center;
+            position: relative;
+
+        }
+
+        .about-image img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+
+
+        @media screen and (max-width: 768px) {
+            .about-content {
+                flex-direction: column;
+            }
+
+            .about-text {
+                padding-bottom: 2em;
+            }
+
+            .about-image {
+                text-align: center;
+            }
+        }
+
+
+
+
+
+        @media (max-width: 768px) {
+            .about-section {
+                flex-direction: column;
+            }
+
+            .about-text {
+                max-width: 100%;
+                padding-right: 0;
+
+            }
+
+            .about-text h1 {
+                font-size: 48px;
+            }
+
+            .about-text h2 {
+                font-size: 20px;
+                top: 10px;
+
+            }
+
+            .about-image {
+                max-width: 100%;
+                margin-top: 20px;
+            }
+        }
+
+
+
+
+
+
+
+
+
+        .arrow-box {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background-color: green;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        .arrow-up {
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 10px solid white;
+        }
+
+
+        .whatsapp-icon {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            width: 3em;
+            height: 3em;
+            background-color: #1b7d12;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        .whatsapp-icon i {
+            color: white;
+            font-size: 2em;
+        }
+
+        .procedures-section {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            padding: 20px;
+        }
+
+        .text-container {
+            flex: 1;
+            padding-right: 20px;
+        }
+
+        .imagea-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .imagea-container video {
+            width: 100%;
+            height: auto;
+            margin: 0;
+            border-radius: 10px;
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 0.7em;
+            margin-right: 10px;
+        }
+
+        .book-appointment {
+            background-color: green;
+            color: white;
+            border-radius: 10px;
+        }
+
+        .ask-question {
+            background-color: green;
+            color: black;
+            border-radius: 10px;
+        }
+
+        /* Responsive styling */
+        @media (max-width: 1024px) {
+            .procedures-section {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .text-container {
+                margin: 0 !important;
+            }
+
+            .imagea-container {
+                margin-top: 20px;
+            }
+        }
+
+
+
+
+
+
+
+        .footer {
+            background-color: #111;
+            color: #fff;
+            padding: 40px 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .footer-columns {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .footer-column {
+            flex: 1;
+            margin: 0 15px;
+            min-width: 250px;
+        }
+
+        .footer-column h3 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        .footer-column p,
+        .footer-column ul,
+        .footer-column li {
+            font-size: 0.9em;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-column li {
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-column li .fas {
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+
+        .footer-column li .arrow {
+            color: red;
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 30px;
+            border-top: 1px solid #333;
+            padding-top: 15px;
+            font-size: 0.85em;
+        }
+
+        .footer-bottom p {
+            margin: 0;
+        }
+
+
+        .clear {
+            clear: both;
+        }
+
+        img {
+            max-width: 100%;
+            border: 0px;
+        }
+
+        ul,
+        ol {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            outline: none;
+            transition: all 0.4s ease-in-out;
+            -webkit-transition: all 0.4s ease-in-out;
+        }
+
+        a:focus,
+        a:active,
+        a:visited,
+        a:hover {
+            text-decoration: none;
+            outline: none;
+        }
+
+        a:hover {
+            color: #e73700;
+        }
+
+        h2 {
+            margin-bottom: 48px;
+            padding-bottom: 16px;
+            font-size: 20px;
+            line-height: 28px;
+            font-weight: 700;
+            position: relative;
+            text-transform: capitalize;
+        }
+
+        h3 {
+            margin: 0 0 10px;
+            font-size: 28px;
+            line-height: 36px;
+        }
+
+        button {
+            outline: none !important;
+        }
+
+        /******* Common Element CSS End *********/
+
+        /* -------- title style ------- */
+        .line-title {
+            position: relative;
+            width: 400px;
+        }
+
+        .line-title::before,
+        .line-title::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 4px;
+            border-radius: 2px;
+        }
+
+        .line-title::before {
+            width: 100%;
+            background: #f2f2f2;
+        }
+
+        .line-title::after {
+            width: 32px;
+
+        }
+
+        /***** responsive css Start ******/
+
+        @media (min-width: 992px) and (max-width: 1199px) {
+            h2 {
+                margin-bottom: 32px;
+            }
+
+            h3 {
+                margin: 0 0 8px;
+                font-size: 24px;
+                line-height: 32px;
+            }
+
+
+
+            @media (min-width: 768px) and (max-width: 991px) {
+                h2 {
+                    margin-bottom: 32px;
+                }
+
+                h3 {
+                    margin: 0 0 8px;
+                    font-size: 24px;
+                    line-height: 32px;
+                }
+
+                .line-title {
+                    width: 330px;
+                }
+            }
+        }
+
+
+
+
+
+        /* Responsive Design */
+        @media (max-width: 940px) {
+            .containery {
+                grid-template-columns: 1fr;
+                /* 1 card per row */
+            }
+
+            .card-bodyy {
+                text-align: center;
+            }
+
+            .user {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .user img {
+                margin-bottom: 10px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .cardy {
+                padding: 15px;
+            }
+
+            .card-bodyy h4 {
+                font-size: 1.2em;
+            }
+
+            .user-info h5 {
+                font-size: 1em;
+            }
+        }
+
+        .img-fluid {
+            display: block;
+            /* Ensures the image is displayed as a block element */
+            margin-left: auto;
+            /* Centers the image horizontally */
+            margin-right: auto;
+            /* Centers the image horizontally */
+            border-radius: 10px;
+            /* Adds border radius */
+            width: 50%;
+            /* Ensures the image remains responsive */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="preloader">
+        <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+            type="module"></script>
+
+        <dotlottie-player src="https://lottie.host/34d602d4-731c-4609-8a02-ba33839bf51f/BiL0d3KrCU.json"
+            background="transparent" speed="3" style="width: 300px; height: 300px;" loop autoplay></dotlottie-player>
+    </div>
+    <div class="page-content">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/images/logo.png" alt="Chicken Logo" style="width: 15vw; height:15vh; ">
+                </a>
+            </div>
+
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+
+
+                <a href="blog.html">News</a>
+                <a href="vid-blog.html">Vlog</a>
+
+            </div>
+            <a href="contact.html"><button class="button-3d"> Contact Us</button></a>
+            <div class="hamburger" onclick="toggleMobileNav()">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+
+        </div>
+        <div class="mobile-nav" id="mobile-nav">
+            <div class="close-btn" onclick="toggleMobileNav()">&times;</div>
+            <nav>
+
+                <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                <a href="about.html"><i class="fas fa-info-circle"></i> About Us</a>
+
+
+                <a href="blog.html"><i class="fas fa-users"></i> News</a>
+                <a href="vid-blog.html"><i class="fas fa-users"></i> Vlog</a>
+                <a href="javascript:void(0);" id="contactLink"><i class="fas fa-envelope"></i> Contact</a>
+            </nav>
+
+        </div>
+
+        <!-- breadcrumb-section -->
+        <div class="breadcrumb-section breadcrumb-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 offset-lg-2 text-center">
+                        <div class="breadcrumb-text">
+                            <p style="font-size: 2em; font-weight: 800; color: rgb(255, 255, 255);">Quality Products</p>
+                            <h1 style="color: #45bb45;">Vlog</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end breadcrumb section -->
+
+        <section class="section blog-single">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 m-auto">
+                        <!-- Single Post -->
+                        <article class="single-post">
+                            <!-- Post title -->
+                            <div class="post-title text-center">
+                                <!-- Tags -->
+                                <ul class="list-inline post-tag">
+                                    <h1 style="color: #000; font-style: italic; margin-top: 2em;">Unigold Foods Ltd
+                                        Pre-Advance Construction Team on the 27th of August
+                                    </h1>
+                                    <li class="list-inline-item">
+                                        <a href="#">Ada Eko</a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a href="#"> 2022</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- Post body -->
+                            <div class="post-body">
+                                <!-- Feature Image -->
+                                <div class="feature-image">
+
+                                    <iframe class="img-fluid" width="100%" height="400px"
+                                        src="https://www.youtube.com/embed/1HLTp66iEug?si=yHkUTJXTBqroGowO"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+                                        style="border-radius: 10px;"></iframe>
+                                </div>
+                                <h1 style="font-style: italic; font-size: 1.3em; margin-top: 2em;">On the 27th of
+                                    August, Unigold Foods Ltd took a major step forward in its ambitious expansion plans
+                                    with the formation of its Pre-Advance Construction Team. This specialized team was
+                                    tasked with laying the groundwork for the construction of new facilities aimed at
+                                    enhancing Unigold Foods' production capabilities and ensuring the highest standards
+                                    in food processing.
+
+
+                                </h1>
+                                <p>Key Highlights from the Event
+                                    The formation of the Pre-Advance Construction Team marks an important milestone in
+                                    Unigold Foods’ ongoing commitment to growth and innovation. Key aspects of the event
+                                    include:
+
+                                    Strategic Planning Session:
+                                    The team, composed of architects, engineers, project managers, and senior Unigold
+                                    Foods executives, held a strategic planning session. This session focused on
+                                    understanding the scope of the construction project and how it will contribute to
+                                    the company’s long-term goals.
+
+                                    Site Inspections:
+                                    The team conducted comprehensive site inspections at the planned construction site
+                                    to assess the terrain, utilities, and potential challenges. The inspections ensure
+                                    that the construction process will run smoothly and meet regulatory standards.
+
+                                    Setting Milestones:
+                                    During the meeting, the team set clear timelines for the project, establishing
+                                    critical milestones for the completion of the groundwork and foundation stages of
+                                    the project.
+
+                                    Coordination with Local Authorities:
+                                    Unigold Foods Ltd continues to work closely with local authorities to ensure
+                                    compliance with environmental, safety, and zoning regulations throughout the
+                                    construction process.</p>
+                                <p>The Vision Behind the Project
+                                    Unigold Foods Ltd’s expansion project is driven by a commitment to improving the
+                                    quality and efficiency of food production. The new facilities will not only enhance
+                                    production but also contribute to creating new job opportunities and fostering
+                                    economic growth in the region.
+
+                                    The company plans to implement cutting-edge technologies to improve its production
+                                    processes, reduce waste, and promote sustainability.
+
+                                    Quotes from the Team
+                                    “We are excited to begin this journey toward building a state-of-the-art facility
+                                    that will position Unigold Foods as a leader in the food production industry,” said
+                                    the Project Manager of Unigold Foods Ltd. “This is the beginning of a new chapter
+                                    for our company, and we look forward to seeing it come to life.”
+
+                                    Looking Ahead
+                                    The Pre-Advance Construction Team’s efforts on the 27th of August were just the
+                                    beginning. The team is now focused on preparing the site for the first stages of
+                                    construction, which will begin in the coming months.
+
+                                    The completion of this project is expected to boost the company’s production
+                                    capacity and further solidify its position as a key player in the Nigerian food
+                                    industry.
+
+                                </p>
+
+
+                            </div>
+                            <li class="list-inline-item">
+                                <br>
+                                <a href="#">Ada Eko</a>
+                            </li>
+                            <li class="list-inline-item">
+                                2022
+                            </li>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section related-articles bg-gray" style="margin-top: 2em;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <!-- Post -->
+                        <div class="post-meta">
+                            <ul class="list-inline post-tag">
+                                <li class="list-inline-item">
+                                    <!-- YouTube Video Embed -->
+                                    <iframe width="100%" height="auto"
+                                        src="https://www.youtube.com/embed/05BF4BFJAu8?si=bJL9dq4r6YoUeh83"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+                                        style="border-radius: 10px;"></iframe>
+                                </li>
+                                <li class="list-inline-item">
+                                    <br>
+                                    <a href="#">Ada Eko</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    2024
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Post Details -->
+                        <div class="post-details">
+                            <a href="vlog2.html">
+                                <p>Unigold Foods Inspection On UNIBEN Farms</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <!-- Post -->
+                        <div class="post-meta">
+                            <ul class="list-inline post-tag">
+                                <li class="list-inline-item">
+                                    <!-- YouTube Video Embed -->
+                                    <iframe width="100%" height="auto"
+                                        src="https://www.youtube.com/embed/1WsTj5sv9nQ?si=H_L__ms0hbMg96WF"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+                                        style="border-radius: 10px;"></iframe>
+                                </li>
+                                <li class="list-inline-item">
+                                    <br>
+                                    <a href="#">Ada Eko</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    2024
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Post Details -->
+                        <div class="post-details">
+                            <a href="vlog1.html">
+                                <p>UNIBEN and Unigold
+                                    Food Processing Company sign multi-billion naira MOU </p>
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-4 col-md-6">
+                        <!-- Post -->
+                        <div class="post-meta">
+                            <ul class="list-inline post-tag">
+                                <li class="list-inline-item">
+                                    <!-- YouTube Video Embed -->
+                                    <iframe width="100%" height="auto"
+                                        src="https://www.youtube.com/embed/Ju3BO4s5rUg?si=bv3zBfXXZGMj4tpY"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+                                        style="border-radius: 10px;"></iframe>
+                                </li>
+                                <li class="list-inline-item">
+                                    <br>
+                                    <a href="#">Ada Eko</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    2022
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Post Details -->
+                        <div class="post-details">
+                            <a href="vlog3.html">
+                                <p>Unigold Foods Ltd-University of Benin Poultry Promotional Video</p>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="contact-banner" style="margin-top: 2em;">
+            <div class="overlays"></div>
+            <div class="contact-content">
+                <h2>Stay Updated!</h2>
+                <p>Got any Questions?.</p>
+                <button id="contactButton">Contact Us</button>
+            </div>
+        </div>
+
+        <div class="contact-form-menu" id="contactFormMenu" style="margin-top: 2.5em;">
+            <div class="contact-form-container">
+                <h2>Have you any question?</h2>
+                <p>If you have any inquiries or need more information about our products and services, feel free to
+                    contact us. We are happy to assist you!</p>
+
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Name" required>
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone" placeholder="Phone">
+                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                    </div>
+                    <textarea id="message" name="message" placeholder="Message" rows="5" required></textarea>
+                    <button type="submit" class="submit-button">Submit</button>
+                </form>
+            </div>
+        </div>
+
+
+        <style>
+            .contact-banner {
+                background-image: url('assets/images/news.jpg');
+                background-size: cover;
+                background-position: center;
+                padding: 70px 0;
+                text-align: center;
+                color: #fff;
+                position: relative;
+            }
+
+            .contact-content h2 {
+                font-size: 2.5em;
+                margin-bottom: 10px;
+                z-index: 2;
+                color: white;
+            }
+
+            .contact-content p {
+                font-size: 1.2em;
+                margin-bottom: 20px;
+                z-index: 2;
+                position: relative;
+                color: white;
+            }
+
+            #contactButton {
+                background-color: green;
+                color: #fff;
+                padding: 15px 30px;
+                font-size: 1em;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                z-index: 2;
+                position: relative;
+                transition: background-color 0.3s ease;
+            }
+
+            #contactButton:hover {
+                background-color: rgb(88, 104, 88);
+            }
+
+            .contact-form-menu {
+                position: fixed;
+                top: 2em;
+                right: -70%;
+                /* Move it off-screen initially */
+                width: 50%;
+                height: 100%;
+                transition: right 0.5s ease;
+                z-index: 999;
+                background: rgba(255, 255, 255, 0);
+                /* Ensure it's visible */
+                overflow-y: auto;
+            }
+
+            .contact-form-menu.active {
+                right: 0;
+                /* Slide into view */
+            }
+
+            .contact-form-container {
+                text-align: left;
+                max-width: 600px;
+                margin: 0 auto;
+                padding: 20px;
+                background-color: #f9f9f9;
+                border-radius: 8px;
+                box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            }
+
+            .contact-form-container h2 {
+                font-size: 1.8em;
+                margin-bottom: 15px;
+                color: #333;
+            }
+
+            .contact-form-container p {
+                font-size: 1em;
+                margin-bottom: 25px;
+                color: #555;
+            }
+
+            .contact-form {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .form-group {
+                display: flex;
+                justify-content: space-between;
+                gap: 10px;
+                margin-bottom: 15px;
+            }
+
+            .form-group input {
+                flex: 1;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                font-size: 1em;
+            }
+
+            textarea {
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                font-size: 1em;
+                margin-bottom: 20px;
+            }
+
+            .submit-button {
+                background-color: green;
+                color: white;
+                padding: 12px 20px;
+                font-size: 1em;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                text-align: center;
+            }
+
+            .submit-button:hover {
+                background-color: rgb(114, 191, 14);
+            }
+        </style>
+
+
+
+
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-columns">
+                    <!-- About Us Section -->
+                    <div class="footer-column">
+                        <h3>Our Mission</h3>
+                        <p>At Unigold Foods, our mission is to provide high-quality, sustainable food products that
+                            support local farmers and contribute to the well-being of our communities. We strive to
+                            be a
+                            leader in the Nigerian food industry by innovating and maintaining ethical business
+                            practices.</p>
+                    </div>
+
+                    <!-- Services Section -->
+                    <div class="footer-column">
+                        <h3>Our Services</h3>
+                        <ul>
+                            <li><span class="arrow">&rarr;</span> Sustainable Livestock Sourcing</li>
+                            <li><span class="arrow">&rarr;</span> High-Quality Tomato Paste Production</li>
+                            <li><span class="arrow">&rarr;</span> Red Palm Oil Manufacturing</li>
+                            <li><span class="arrow">&rarr;</span> Community Empowerment Programs</li>
+                            <li><span class="arrow">&rarr;</span> Eco-friendly Agriculture Initiatives</li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact Info Section -->
+                    <div class="footer-column">
+                        <h3>Contact Us</h3>
+                        <ul class="contact-info">
+                            <li><i class="fas fa-map-marker-alt"></i> 1234 Unigold Street, Lagos, Nigeria</li>
+                            <li><i class="fas fa-envelope"></i> support@unigoldfoods.com</li>
+                            <li><i class="fas fa-phone"></i> +234 800 123 4567</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Footer Bottom -->
+                <div class="footer-bottom">
+                    <p>&copy; 2024 Unigold Foods. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+
+        <div class="arrow-box" onclick="scrollToTop()">
+            <div class="arrow-up"></div>
+        </div>
+
+        <div class="whatsapp-icon">
+            <i class="fab fa-whatsapp"></i>
+        </div>
+
+</body>
+</div>
+<script>
+    // script.js
+
+    window.addEventListener('load', () => {
+        const preloader = document.querySelector('.preloader');
+        const pageContent = document.querySelector('.page-content');
+
+        if (preloader && pageContent) {
+            setTimeout(() => {
+                preloader.style.opacity = '0';
+                preloader.style.transition = 'opacity 1s ease-out'; // Smooth fade-out transition
+
+                setTimeout(() => {
+                    preloader.style.display = 'none';
+                    pageContent.style.display = 'block'; // Show the page content
+                }, 1000); // Match this with the fade-out duration
+            }, 2000); // Preloader duration (3000ms = 3 seconds)
+        } else {
+            console.error('Preloader or page content not found');
+        }
+    });
+
+    // Open the contact form menu when the button is clicked
+    document.getElementById("contactButton").onclick = function () {
+        document.getElementById("contactFormMenu").classList.add("active");
+    }
+
+    // Open the contact form menu when the link is clicked
+    document.getElementById("contactLink").onclick = function () {
+        document.getElementById("contactFormMenu").classList.add("active");
+    }
+
+    // Close the contact form menu when the close button (X) is clicked
+    document.getElementById("closeForm").onclick = function () {
+        document.getElementById("contactFormMenu").classList.remove("active");
+    }
+
+    // Close the contact form menu when clicking outside of it
+    document.addEventListener('click', (event) => {
+        const contactFormMenu = document.getElementById('contactFormMenu');
+
+        if (!contactFormMenu.contains(event.target) && !document.getElementById('contactButton').contains(event.target) && !document.getElementById('contactLink').contains(event.target)) {
+            if (contactFormMenu.classList.contains('active')) {
+                contactFormMenu.classList.remove('active');
+            }
+        }
+    });
+
+
+
+
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const mobileNav = document.getElementById('mobile-nav');
+        const overlay = document.createElement('div');
+        overlay.classList.add('overlay');
+
+        document.body.appendChild(overlay);
+
+        function toggleMobileNav() {
+            if (mobileNav.classList.contains('active')) {
+                mobileNav.classList.remove('active');
+                overlay.classList.remove('active');
+            } else {
+                mobileNav.classList.add('active');
+                overlay.classList.add('active');
+            }
+        }
+
+        document.querySelector('.hamburger').addEventListener('click', toggleMobileNav);
+
+        document.querySelector('.close-btn').addEventListener('click', () => {
+            if (mobileNav.classList.contains('active')) {
+                mobileNav.classList.remove('active');
+                overlay.classList.remove('active');
+            }
+        });
+
+        overlay.addEventListener('click', () => {
+            if (mobileNav.classList.contains('active')) {
+                mobileNav.classList.remove('active');
+                overlay.classList.remove('active');
+            }
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!mobileNav.contains(event.target) && !document.querySelector('.hamburger').contains(event.target)) {
+                if (mobileNav.classList.contains('active')) {
+                    mobileNav.classList.remove('active');
+                    overlay.classList.remove('active');
+                }
+            }
+        });
+    });
+
+
+
+
+
+    $(".custom-carousel").owlCarousel({
+        autoWidth: true,
+        loop: true
+    });
+    $(document).ready(function () {
+        $(".custom-carousel .item").click(function () {
+            $(".custom-carousel .item").not($(this)).removeClass("active");
+            $(this).toggleClass("active");
+        });
+    });
+
+
+
+
+
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+
+
+
+
+
+
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const contactButton = document.getElementById("contactButton");
+        const contactFormMenu = document.getElementById('contactFormMenu');
+
+        if (!contactButton || !contactFormMenu) {
+            console.error('Contact button or form menu not found.');
+            return;
+        }
+
+        // Open contact form menu
+        contactButton.onclick = function () {
+            contactFormMenu.classList.add('active');
+        };
+
+        // Function to close the form
+        function closeForm() {
+            contactFormMenu.classList.remove('active');
+        }
+
+        // Add event listener for clicks outside the container
+        document.addEventListener('click', function (event) {
+            // Check if the click is outside the contactFormMenu and contactButton
+            if (!contactFormMenu.contains(event.target) && !contactButton.contains(event.target)) {
+                closeForm();
+            }
+        });
+
+        // Prevent clicks inside the contactFormMenu from closing the menu
+        contactFormMenu.addEventListener('click', function (event) {
+            event.stopPropagation();
+        });
+    });
+</script>
+
+
+
+
+</body>
+
+</html>

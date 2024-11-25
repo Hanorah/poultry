@@ -1,0 +1,1807 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unigold Foods</title>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            overflow-x: hidden;
+            /* Prevent horizontal scroll */
+        }
+
+
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgb(255, 255, 255);
+            /* Optional: adds a white background with slight transparency */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            /* Make sure the preloader is on top of other content */
+        }
+
+        .page-content {
+            display: none;
+            /* Hide content initially */
+        }
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+
+            z-index: 1000;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            text-transform: uppercase;
+            color: #000;
+            font-size: 0.8em;
+            margin: 0 30px;
+        }
+
+        .navbar a:hover {
+            color: green;
+            /* #916E99 */
+        }
+
+
+
+
+        .button-3d {
+            background-color: #226922;
+            /* Button color */
+            color: #fff;
+            font-size: 0.8em;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 5px #2fa00a;
+            /* Shadow for 3D effect */
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .button-3d:hover {
+            background-color: #000000;
+            box-shadow: 0 4px #0d9933;
+            /* Darken shadow on hover */
+        }
+
+        .button-3d:active {
+            transform: translateY(4px);
+            /* Button moves down on click */
+            box-shadow: 0 1px #0ea655;
+            /* Reduced shadow to look pressed */
+        }
+
+
+        /* home section start */
+        :root {
+            --color: #3e991f;
+        }
+
+        body {
+            font-size: 16px;
+            font-family: 'Montserrat', sans-sherif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .content {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .hero {
+            position: relative;
+            background-image: url('assets/images/hero.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            color: white;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .overlays {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.345);
+            /* Adjust the opacity as needed */
+            z-index: 1;
+            /* Ensure the overlay appears above the background */
+        }
+
+        .content {
+            position: relative;
+            z-index: 2;
+            /* Ensure the text content appears above the overlay */
+        }
+
+        .hero h2 {
+            font-size: 4.5rem;
+            margin: 0 0 10px;
+            line-height: 1;
+            color: rgb(255, 255, 255);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.872);
+            line-height: 1.4;
+        }
+
+
+
+
+
+
+
+
+        /* Update this for the hamburger icon */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .hamburger .bar1,
+        .hamburger .bar2,
+        .hamburger .bar3 {
+            width: 25px;
+            height: 3px;
+            background-color: black;
+            margin: 4px 0;
+            transition: 0.3s;
+        }
+
+        /* Transform hamburger into an 'X' */
+        .hamburger.active .bar1 {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+
+        .hamburger.active .bar2 {
+            opacity: 0;
+        }
+
+        .hamburger.active .bar3 {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+
+        /* Mobile menu styles */
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 250px;
+            height: 40vh;
+            /* Only apply border-radius to the left side */
+            border-top-left-radius: 15px;
+            /* Adjust as needed */
+            border-bottom-left-radius: 15px;
+            /* Adjust as needed */
+
+            background-color: rgba(255, 255, 255, 0.959);
+
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+            z-index: 1001;
+            padding-top: 60px;
+            flex-direction: column;
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .mobile-nav.active {
+            display: flex;
+            transform: translateX(0);
+        }
+
+        /* Mobile menu links styles */
+        .mobile-nav a {
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 16px;
+            color: black;
+            display: block;
+        }
+
+        .mobile-nav a:hover {
+            background-color: #ddd;
+        }
+
+        /* Close button */
+        .close-btn {
+            font-size: 3em;
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: #000;
+        }
+
+        /* Overlay styles */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+            /* Hidden by default */
+            z-index: 1000;
+        }
+
+        /* Show overlay when menu is active */
+        .overlay.active {
+            display: block;
+        }
+
+
+
+        @media (max-width: 768px) {
+            .navbar .nav-links {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .home-text {
+                margin-top: 10em;
+            }
+
+        }
+
+        .about-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px;
+            background-color: white;
+        }
+
+        .about-text {
+            position: relative;
+            flex: 1;
+            max-width: 50%;
+            padding-right: 20px;
+
+        }
+
+        .about-text h1 {
+            font-size: 95px;
+            color: #e4e4e4;
+            opacity: 0.7;
+            font-family: 'Barlow Condensed', sans-serif;
+            margin: 0;
+
+        }
+
+        .about-text h2 {
+            font-size: 26px;
+            color: green;
+            font-family: 'Barlow Semi Condensed', sans-serif;
+            position: absolute;
+            top: 20px;
+            left: 0;
+            margin: 0;
+
+        }
+
+        .about-text p {
+            margin: 50px 0;
+            font-size: 16px;
+            color: #000;
+        }
+
+
+
+        .about-image {
+            flex: 1;
+            text-align: center;
+            position: relative;
+
+        }
+
+        .about-image img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+
+
+        @media screen and (max-width: 768px) {
+            .about-content {
+                flex-direction: column;
+            }
+
+            .about-text {
+                padding-bottom: 2em;
+            }
+
+            .about-image {
+                text-align: center;
+            }
+        }
+
+
+
+
+
+        @media (max-width: 768px) {
+            .about-section {
+                flex-direction: column;
+            }
+
+            .about-text {
+                max-width: 100%;
+                padding-right: 0;
+
+            }
+
+            .about-text h1 {
+                font-size: 48px;
+            }
+
+            .about-text h2 {
+                font-size: 20px;
+                top: 10px;
+
+            }
+
+            .about-image {
+                max-width: 100%;
+                margin-top: 20px;
+            }
+        }
+
+
+
+
+
+
+
+
+
+        .arrow-box {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background-color: green;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        .arrow-up {
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 10px solid white;
+        }
+
+
+        .whatsapp-icon {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            width: 3em;
+            height: 3em;
+            background-color: #1b7d12;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        .whatsapp-icon i {
+            color: white;
+            font-size: 2em;
+        }
+
+        .procedures-section {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            padding: 20px;
+        }
+
+        .text-container {
+            flex: 1;
+
+
+        }
+
+        .imagea-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .imagea-container video {
+            width: 100%;
+            height: auto;
+            margin: 0;
+            border-radius: 10px;
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 0.7em;
+            margin-right: 10px;
+        }
+
+        .book-appointment {
+            background-color: green;
+            color: white;
+            border-radius: 10px;
+        }
+
+        .ask-question {
+            background-color: green;
+            color: black;
+            border-radius: 10px;
+        }
+
+        /* Responsive styling */
+        @media (max-width: 1024px) {
+            .procedures-section {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+
+
+            .imagea-container {
+                margin-top: 20px;
+            }
+        }
+
+
+
+
+
+
+
+        .footer {
+            background-color: #111;
+            color: #fff;
+            padding: 40px 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .footer-columns {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .footer-column {
+            flex: 1;
+            margin: 0 15px;
+            min-width: 250px;
+        }
+
+        .footer-column h3 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        .footer-column p,
+        .footer-column ul,
+        .footer-column li {
+            font-size: 0.9em;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-column li {
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-column li .fas {
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+
+        .footer-column li .arrow {
+            color: red;
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 30px;
+            border-top: 1px solid #333;
+            padding-top: 15px;
+            font-size: 0.85em;
+        }
+
+        .footer-bottom p {
+            margin: 0;
+        }
+
+
+        .clear {
+            clear: both;
+        }
+
+        img {
+            max-width: 100%;
+            border: 0px;
+        }
+
+        ul,
+        ol {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            outline: none;
+            transition: all 0.4s ease-in-out;
+            -webkit-transition: all 0.4s ease-in-out;
+        }
+
+        a:focus,
+        a:active,
+        a:visited,
+        a:hover {
+            text-decoration: none;
+            outline: none;
+        }
+
+        a:hover {
+            color: #e73700;
+        }
+
+        h2 {
+            margin-bottom: 48px;
+            padding-bottom: 16px;
+            font-size: 20px;
+            line-height: 28px;
+            font-weight: 700;
+            position: relative;
+            text-transform: capitalize;
+        }
+
+        h3 {
+            margin: 0 0 10px;
+            font-size: 28px;
+            line-height: 36px;
+        }
+
+        button {
+            outline: none !important;
+        }
+
+        /******* Common Element CSS End *********/
+
+        /* -------- title style ------- */
+        .line-title {
+            position: relative;
+            width: 400px;
+        }
+
+        .line-title::before,
+        .line-title::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 4px;
+            border-radius: 2px;
+        }
+
+        .line-title::before {
+            width: 100%;
+            background: #f2f2f2;
+        }
+
+        .line-title::after {
+            width: 32px;
+
+        }
+
+        /******* Middle section CSS Start ******/
+        /* -------- Landing page ------- */
+        .game-section {
+            padding: 60px 50px;
+        }
+
+        .game-section .owl-stage {
+            margin: 15px 0;
+            display: flex;
+            display: -webkit-flex;
+        }
+
+        .game-section .item {
+            margin: 0 15px 60px;
+            width: 320px;
+            height: 400px;
+            display: flex;
+            display: -webkit-flex;
+            align-items: flex-end;
+            -webkit-align-items: flex-end;
+            background: #343434 no-repeat center center / cover;
+            border-radius: 16px;
+            overflow: hidden;
+            position: relative;
+            transition: all 0.4s ease-in-out;
+            -webkit-transition: all 0.4s ease-in-out;
+            cursor: pointer;
+        }
+
+        .game-section .item.active {
+            width: 500px;
+            box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
+            -webkit-box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
+        }
+
+        .game-section .item:after {
+            content: "";
+            display: block;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 0;
+            background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+        }
+
+        .game-section .item-desc {
+            padding: 0 24px 12px;
+            color: #fff;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            transform: translateY(calc(100% - 54px));
+            -webkit-transform: translateY(calc(100% - 54px));
+            transition: all 0.4s ease-in-out;
+            -webkit-transition: all 0.4s ease-in-out;
+        }
+
+        .game-section .item.active .item-desc {
+            transform: none;
+            -webkit-transform: none;
+        }
+
+        .game-section .item-desc p {
+            opacity: 0;
+            -webkit-transform: translateY(32px);
+            transform: translateY(32px);
+            transition: all 0.4s ease-in-out 0.2s;
+            -webkit-transition: all 0.4s ease-in-out 0.2s;
+        }
+
+        .game-section .item.active .item-desc p {
+            opacity: 1;
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+        }
+
+        .game-section .owl-theme.custom-carousel .owl-dots {
+            margin-top: -20px;
+            position: relative;
+            z-index: 5;
+        }
+
+        /******** Middle section CSS End *******/
+
+        /***** responsive css Start ******/
+
+        @media (min-width: 992px) and (max-width: 1199px) {
+            h2 {
+                margin-bottom: 32px;
+            }
+
+            h3 {
+                margin: 0 0 8px;
+                font-size: 24px;
+                line-height: 32px;
+            }
+
+            /* -------- Landing page ------- */
+            .game-section {
+                padding: 50px 30px;
+            }
+
+            .game-section .item {
+                margin: 0 12px 60px;
+                width: 260px;
+                height: 360px;
+            }
+
+            .game-section .item.active {
+                width: 400px;
+            }
+
+            .game-section .item-desc {
+                transform: translateY(calc(100% - 46px));
+                -webkit-transform: translateY(calc(100% - 46px));
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 991px) {
+            h2 {
+                margin-bottom: 32px;
+            }
+
+            h3 {
+                margin: 0 0 8px;
+                font-size: 24px;
+                line-height: 32px;
+            }
+
+            .line-title {
+                width: 330px;
+            }
+
+            /* -------- Landing page ------- */
+            .game-section {
+                padding: 50px 30px 40px;
+            }
+
+            .game-section .item {
+                margin: 0 12px 60px;
+                width: 240px;
+                height: 330px;
+            }
+
+            .game-section .item.active {
+                width: 360px;
+            }
+
+            .game-section .item-desc {
+                transform: translateY(calc(100% - 42px));
+                -webkit-transform: translateY(calc(100% - 42px));
+            }
+        }
+
+        @media (max-width: 767px) {
+            body {
+                font-size: 14px;
+            }
+
+            h2 {
+                margin-bottom: 20px;
+            }
+
+            h3 {
+                margin: 0 0 8px;
+                font-size: 19px;
+                line-height: 24px;
+            }
+
+            .line-title {
+                width: 250px;
+            }
+
+            /* -------- Landing page ------- */
+            .game-section {
+                padding: 30px 15px 20px;
+            }
+
+            .game-section .item {
+                margin: 0 10px 40px;
+                width: 200px;
+                height: 280px;
+            }
+
+            .game-section .item.active {
+                width: 270px;
+                box-shadow: 6px 10px 10px rgba(0, 0, 0, 0.25);
+                -webkit-box-shadow: 6px 10px 10px rgba(0, 0, 0, 0.25);
+            }
+
+            .game-section .item-desc {
+                padding: 0 14px 5px;
+                transform: translateY(calc(100% - 42px));
+                -webkit-transform: translateY(calc(100% - 42px));
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+            type="module"></script>
+
+        <dotlottie-player src="https://lottie.host/34d602d4-731c-4609-8a02-ba33839bf51f/BiL0d3KrCU.json"
+            background="transparent" speed="3" style="width: 300px; height: 300px;" loop autoplay></dotlottie-player>
+    </div>
+    <div class="page-content">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/images/logo.png" alt="Chicken Logo" style="width: 15vw; height:15vh; ">
+                </a>
+            </div>
+
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+
+
+                <a href="blog.html">News</a>
+                <a href="vid-blog.html">Vlog</a>
+
+            </div>
+            <a href="contact.html"><button class="button-3d"> Contact Us</button></a>
+            <div class="hamburger" onclick="toggleMobileNav()" style="margin-right: 2em;">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+
+        </div>
+        <div class="mobile-nav" id="mobile-nav">
+            <div class="close-btn" onclick="toggleMobileNav()">&times;</div>
+            <nav>
+
+                <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                <a href="about.html"><i class="fas fa-info-circle"></i> About Us</a>
+
+
+                <a href="blog.html"><i class="fas fa-users"></i> News</a>
+                <a href="vid-blog.html"><i class="fas fa-users"></i> Vlog</a>
+                <a href="javascript:void(0);" id="contactLink"><i class="fas fa-envelope"></i> Contact</a>
+            </nav>
+
+        </div>
+
+        <!-- home section start -->
+
+        <section class="hero">
+            <div class="overlays"></div>
+            <div class="content">
+                <h2> UNIGOLD FOODS</h2>
+                <p style="color: white;">Discover a world of nutritious and flavorful food products tailored to meet
+                    your every need. Our
+                    commitment to quality and sustainability ensures that every bite you take is crafted with care and
+                    excellence.</p>
+                <a href="about.html">
+                    <div class="button-3d" style="text-align: center;">Learn More</div>
+                </a>
+            </div>
+        </section>
+
+        <div class="about-section">
+            <div class="about-text">
+                <h1>About Us</h1>
+                <h2 style="margin-top: 3em;">Dedicated to Excellence</h2>
+                <p>
+                    At Unigold Foods, we pride ourselves on delivering top-tier food products that not only satisfy your
+                    taste buds but also support a healthier lifestyle. From farm-fresh ingredients to expertly crafted
+                    recipes, our mission is to bring you the best in every package.
+                    <br><br>
+                    Whether you're cooking for your family or hosting a gathering, Unigold Foods ensures a delightful
+                    culinary experience. Join us on a journey of flavors and discover why we are a trusted name in the
+                    food industry.
+                </p>
+                <a href="about.html" class="button-3d"> Learn More<i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="about-image">
+                <img src="assets/images/WhatsApp Image 2024-11-14 at 20.43.32_2da391ed.jpg"
+                    alt="Unigold Foods Products">
+            </div>
+        </div>
+
+        <div class="boda">
+            <div class="marquee">
+                <div class="marquee__group">
+                    <img src='assets/images/Product 1.jpg' alt=''>
+                    <img src='assets/images/Product 10.jpg' alt=''>
+                    <img src='assets/images/Product 10a.jpg' alt=''>
+                    <img src='assets/images/Product 10b.jpg' alt=''>
+                    <img src='assets/images/Product 10c.jpg' alt=''>
+                </div>
+
+                <div aria-hidden="true" class="marquee__group">
+                    <img src='assets/images/Product 10d.jpg' alt=''>
+                    <img src='assets/images/Product 2.jpg' alt=''>
+                    <img src='assets/images/Product 4.jpg' alt=''>
+                    <img src='assets/images/Product 6.jpg' alt=''>
+                    <img src='assets/images/Product 7.jpg' alt=''>
+                </div>
+            </div>
+
+            <div class="marquee marquee--borders" style="--duration: 100s">
+                <div class="marquee__group">
+                    <p>UNIGOLD FOODS</p>
+                    <p aria-hidden="true">NARA EGGS </p>
+                    <p aria-hidden="true">NARA TOMATO PASTE</p>
+                </div>
+
+                <div aria-hidden="true" class="marquee__group">
+                    <p>NARA PALM OIL</p>
+                    <p>NARA POULTRY FEED</p>
+
+                </div>
+            </div>
+
+            <div class="marquee marquee--reverse">
+                <div class="marquee__group">
+                    <img src='assets/images/Product 8a (2).jpg' alt=''>
+                    <img src='assets/images/Product 8a.jpg' alt=''>
+                    <img src='assets/images/Product 8b.jpeg' alt=''>
+                    <img src='assets/images/Product 8c.jpg' alt=''>
+                    <img src='assets/images/Product 9.jpeg' alt=''>
+                </div>
+
+                <div aria-hidden="true" class="marquee__group">
+                    <img src='assets/images/Product 1.jpg' alt=''>
+                    <img src='assets/images/Product 10.jpg' alt=''>
+                    <img src='assets/images/Product 10a.jpg' alt=''>
+                    <img src='assets/images/Product 10b.jpg' alt=''>
+                    <img src='assets/images/Product 10c.jpg' alt=''>
+                </div>
+            </div>
+
+
+        </div>
+
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Corben:wght@700&display=swap");
+
+            * {
+                box-sizing: border-box;
+            }
+
+
+            * {
+                box-sizing: border-box;
+            }
+
+            .boda {
+                min-height: 100vh;
+            }
+
+            .boda {
+                --space: 2rem;
+
+                display: grid;
+                align-content: center;
+                overflow: hidden;
+                gap: var(--space);
+                width: 100%;
+                font-family: "Corben", system-ui, sans-serif;
+                font-size: 1.5rem;
+                line-height: 1.5;
+            }
+
+            .marquee {
+                --duration: 60s;
+                --gap: var(--space);
+
+                display: flex;
+                overflow: hidden;
+                user-select: none;
+                gap: var(--gap);
+                transform: skewY(-3deg);
+            }
+
+            .marquee__group {
+                flex-shrink: 0;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                gap: var(--gap);
+                min-width: 100%;
+                animation: scroll var(--duration) linear infinite;
+            }
+
+            @media (prefers-reduced-motion: reduce) {
+                .marquee__group {
+                    animation-play-state: paused;
+                }
+            }
+
+            .marquee__group img {
+                max-width: clamp(10rem, 1rem + 28vmin, 20rem);
+                aspect-ratio: 1;
+                object-fit: cover;
+                border-radius: 1rem;
+            }
+
+            .marquee__group p {
+                background-image: linear-gradient(75deg,
+                        hsl(124, 70%, 49%) 0%,
+                        hsl(117, 70%, 49%) 11%,
+                        hsl(126, 34%, 57%) 22%,
+                        hsl(156, 71%, 48%) 33%,
+                        hsl(157, 71%, 48%) 44%,
+                        hsl(86, 71%, 48%) 56%,
+                        hsl(85, 71%, 48%) 67%,
+                        hsl(74, 72%, 48%) 78%,
+                        hsl(161, 83%, 27%) 89%,
+                        hsl(166, 73%, 47%) 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            .marquee--borders {
+                border-block: 3px solid rgb(30, 255, 86);
+                padding-block: 0.75rem;
+            }
+
+            .marquee--reverse .marquee__group {
+                animation-direction: reverse;
+                animation-delay: calc(var(--duration) / -2);
+            }
+
+            @keyframes scroll {
+                0% {
+                    transform: translateX(0);
+                }
+
+                100% {
+                    transform: translateX(calc(-100% - var(--gap)));
+                }
+            }
+
+
+
+
+            .boda {
+                --space: 2rem;
+
+                display: grid;
+                align-content: center;
+                overflow: hidden;
+                gap: var(--space);
+                width: 100%;
+
+            }
+
+            .marquee {
+                --duration: 60s;
+                --gap: var(--space);
+
+                display: flex;
+                overflow: hidden;
+                user-select: none;
+                gap: var(--gap);
+                transform: skewY(-3deg);
+            }
+
+            .marquee__group {
+                flex-shrink: 0;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                gap: var(--gap);
+                min-width: 100%;
+                animation: scroll var(--duration) linear infinite;
+            }
+
+            @media (prefers-reduced-motion: reduce) {
+                .marquee__group {
+                    animation-play-state: paused;
+                }
+            }
+
+            .marquee__group img {
+                max-width: clamp(10rem, 1rem + 28vmin, 20rem);
+                aspect-ratio: 1;
+                object-fit: cover;
+                border-radius: 1rem;
+            }
+
+            .marquee__group p {
+                background-image: linear-gradient(75deg,
+                        hsl(124, 70%, 49%) 0%,
+                        hsl(117, 70%, 49%) 11%,
+                        hsl(126, 34%, 57%) 22%,
+                        hsl(156, 71%, 48%) 33%,
+                        hsl(157, 71%, 48%) 44%,
+                        hsl(86, 71%, 48%) 56%,
+                        hsl(85, 71%, 48%) 67%,
+                        hsl(74, 72%, 48%) 78%,
+                        hsl(161, 83%, 27%) 89%,
+                        hsl(166, 73%, 47%) 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            .marquee--borders {
+                border-block: 3px solid rgb(30, 255, 79);
+                padding-block: 0.75rem;
+            }
+
+            .marquee--reverse .marquee__group {
+                animation-direction: reverse;
+                animation-delay: calc(var(--duration) / -2);
+            }
+
+            @keyframes scroll {
+                0% {
+                    transform: translateX(0);
+                }
+
+                100% {
+                    transform: translateX(calc(-100% - var(--gap)));
+                }
+            }
+
+            .text-container h1 {
+                font-size: 95px;
+                color: #c7c7c7;
+                opacity: 0.7;
+                font-family: 'Barlow Condensed', sans-serif;
+
+
+            }
+        </style>
+
+        <div class="about-section">
+            <div class="about-text">
+                <h1> UNIGOLD <br>FOODS</h1>
+
+                <p style="margin-right: 1em; margin-top: -10px;">
+                    Unigold Foods brings you a diverse range of premium food products,
+                    carefully crafted to meet the needs of today’s
+                    health-conscious consumers. With an unwavering commitment to quality,
+                    we offer products that combine tradition and
+                    innovation in every bite.
+                </p>
+
+                <p>
+                    From sustainably sourced ingredients to innovative production
+                    techniques, we ensure that every bite
+                    reflects our commitment to excellence. Whether
+                    you're looking for everyday essentials or something
+                    special, we’ve got you covered.
+                </p>
+
+                <p>
+                    Join countless satisfied customers who trust
+                    Unigold Foods for their culinary needs. Explore our
+                    diverse product range and discover why we are a
+                    preferred choice for families and food enthusiasts
+                    alike.
+                </p>
+                <a href="about.html"><button class="button-3d">Find Out More</button></a>
+                <a href="contact.html"> <button class="button-3d">Buy A Product</button></a>
+            </div>
+            <div class="abouti-image">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/1WsTj5sv9nQ?si=D71KkGo83S023W-9"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+                    style="border-radius: 1.5em;"></iframe>
+
+            </div>
+        </div>
+
+        <style>
+            .abouti-image {
+                display: flex;
+                /* Use flexbox to enable centering */
+                justify-content: center;
+                /* Horizontally center the content */
+                align-items: center;
+                /* Vertically align the content (optional) */
+                margin: 20px 0;
+                /* Add some spacing around the container */
+            }
+
+            .abouti-image iframe {
+                width: 100%;
+                /* Make the iframe responsive */
+                max-width: 500px;
+                /* Set a maximum width for the iframe */
+                height: auto;
+                /* Maintain aspect ratio */
+                border-radius: 1.5em;
+                /* Add rounded corners */
+            }
+
+            @media (max-width: 768px) {
+                .abouti-image {
+                    margin: 10px 0;
+                    /* Adjust margin for smaller screens */
+                }
+            }
+        </style>
+
+
+
+
+
+
+
+        <section class="partners-marquee">
+            <h1 class="partners-heading">PARTNERS</h1>
+
+            <div class="partners-container">
+
+                <div class="partner-logo">
+                    <img src="assets/images/u1.jpg" alt="Partner 1">
+                </div>
+                <div class="partner-logo">
+                    <img src="assets/images/u2.jpg" alt="Partner 2">
+                </div>
+                <div class="partner-logo">
+                    <img src="assets/images/u3.jpg" alt="Partner 3">
+                </div>
+                <div class="partner-logo">
+                    <img src="assets/images/u4.jpg" alt="Partner 4">
+                </div>
+
+
+                <div class="partner-logo">
+                    <img src="assets/images/u6.jpg" alt="Partner 7">
+                </div>
+                <div class="partner-logo">
+                    <img src="assets/images/u7.jpg" alt="Partner 8">
+                </div>
+                <div class="partner-logo">
+                    <img src="assets/images/u8.jpg" alt="Partner 9">
+                </div>
+                <div class="partner-logo">
+                    <img src="assets/images/u9.png" alt="Partner 10">
+                </div>
+                <div class="partner-logo">
+                    <img src="assets/images/u11.jpg" alt="Partner 11">
+                </div>
+                <div class="partner-logo">
+                    <img src="assets/images/u13.jpg" alt="Partner 12">
+                </div>
+
+
+            </div>
+        </section>
+        <style>
+            .partners-heading {
+                text-align: center;
+                /* Centers the text horizontally */
+                font-size: 2.5em;
+                /* Adjusts the font size */
+                font-weight: bold;
+                /* Makes the text bold */
+                color: #333;
+                /* Sets a dark color for the text (you can change this) */
+                text-transform: uppercase;
+                /* Makes the text uppercase */
+                margin-bottom: 20px;
+                /* Adds space below the heading */
+                letter-spacing: 2px;
+                /* Slightly spaces the letters for a clean look */
+                font-family: 'Arial', sans-serif;
+                /* Optional: Adjusts font-family */
+            }
+
+            .partners-marquee {
+                background: rgba(255, 255, 255, 0.1);
+                /* Glass effect */
+                backdrop-filter: blur(10px);
+                /* Apply blur for frosted glass effect */
+                padding: 20px 0;
+                overflow: hidden;
+                position: relative;
+                border-radius: 15px;
+                /* Optional: add border-radius to the section */
+            }
+
+            .partners-container {
+                display: flex;
+                animation: scroll-left 30s linear infinite;
+            }
+
+            .partner-logo {
+                flex: 0 0 auto;
+                margin-right: 50px;
+            }
+
+            .partner-logo img {
+                width: 150px;
+                /* Set the width to make all images the same size */
+                height: 150px;
+                /* Set height equal to width for square images */
+                object-fit: contain;
+                border-radius: 15px;
+                /* Apply border-radius to each logo */
+            }
+
+            /* Animation for scrolling the logos */
+            @keyframes scroll-left {
+                0% {
+                    transform: translateX(100%);
+                }
+
+                100% {
+                    transform: translateX(-100%);
+                }
+            }
+        </style>
+
+
+
+
+
+
+
+
+        <section class="game-section">
+            <h2 class="line-title">Products</h2>
+            <p class="section-description">All over Nigeria, we work every day to bring quality wholesome food products
+                to millions of Nigerians. Our belief is simple – put smiles on the faces of Nigerians.</p>
+            <p class="section-description">As a modern multi-national food company, through our contact farming scheme,
+                we produce a wide variety of products and cash crops, including animal protein products such as chicken,
+                beef, and eggs. All our products are produced and sold under our brand, NARA™.</p>
+
+            <div class="owl-carousel custom-carousel owl-theme">
+                <div class="item active" style="background-image: url('assets/images/Product\ 2.jpg');">
+                    <div class="item-desc">
+                        <h3>NARA FROZEN CHICKEN (OROBO)</h3>
+                        <p>Our NARA Frozen Chicken (Orobo) is expertly prepared, preserving the natural flavors of
+                            chicken while offering superior quality. It’s a preferred choice for many families and
+                            chefs, available across various retail channels.</p>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url('assets/images/Product\ 10a.jpg');">
+                    <div class="item-desc">
+                        <h3>NARA TOMATO PASTE</h3>
+                        <p>Our NARA Tomato Paste is made from the finest tomatoes, providing a rich, authentic flavor
+                            that enhances every dish. It is an essential ingredient in Nigerian kitchens, used in
+                            various culinary delights.</p>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url('assets/images/Product\ 6.jpg');">
+                    <div class="item-desc">
+                        <h3>NARA EGGS</h3>
+                        <p>NARA Eggs are rich in nutrients and are sourced from healthy, well-fed chickens. They are
+                            available in various sizes and are perfect for daily use in homes and restaurants alike.</p>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url('assets/images/Product\ 8a.jpg');">
+                    <div class="item-desc">
+                        <h3>NARA PALM OIL</h3>
+                        <p>Our NARA Palm Oil is sourced from sustainable plantations and is refined to meet the highest
+                            quality standards. It is an essential product in many Nigerian dishes, giving a rich and
+                            authentic taste.</p>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url('assets/images/Product\ 9.jpeg');">
+                    <div class="item-desc">
+                        <h3>NARA POULTRY FEED</h3>
+                        <p>NARA Poultry Feed is designed to provide optimal nutrition for chickens, ensuring healthy
+                            growth and productivity. Our feed is available in different variants to meet the needs of
+                            various poultry breeds.</p>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url('assets/images/Product\ 1.jpg');">
+                    <div class="item-desc">
+                        <h3>Animal Protein Products</h3>
+                        <p>Unigold Foods is also a leading provider of animal protein products such as beef, chicken,
+                            and eggs. Our products are readily available through major retail channels, grocery stores,
+                            and open markets across Nigeria.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <div class="contact-banner">
+            <div class="overlays"></div>
+            <div class="contact-content">
+                <h2>Stay Updated!</h2>
+                <p>Got any Questions?.</p>
+                <button id="contactButton">Contact Us</button>
+            </div>
+        </div>
+
+        <div class="contact-form-menu" id="contactFormMenu" style="margin-top: 2em;">
+            <div class="contact-form-container">
+                <h2>Have you any question?</h2>
+                <p>If you have any inquiries or need more information about our products and services, feel free to
+                    contact us. We are happy to assist you!</p>
+
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Name" required>
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone" placeholder="Phone">
+                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                    </div>
+                    <textarea id="message" name="message" placeholder="Message" rows="5" required></textarea>
+                    <button type="submit" class="submit-button">Submit</button>
+                </form>
+            </div>
+        </div>
+
+
+        <style>
+            .contact-banner {
+                background-image: url('assets/images/news.jpg');
+                background-size: cover;
+                background-position: center;
+                padding: 70px 0;
+                text-align: center;
+                color: #fff;
+                position: relative;
+            }
+
+            .contact-content h2 {
+                font-size: 2.5em;
+                margin-bottom: 10px;
+                z-index: 2;
+            }
+
+            .contact-content p {
+                font-size: 1.2em;
+                margin-bottom: 20px;
+                z-index: 2;
+                position: relative
+            }
+
+            #contactButton {
+                background-color: green;
+                color: #fff;
+                padding: 15px 30px;
+                font-size: 1em;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                z-index: 2;
+                position: relative;
+                transition: background-color 0.3s ease;
+            }
+
+            #contactButton:hover {
+                background-color: rgb(88, 104, 88);
+            }
+
+            .contact-form-menu {
+                position: fixed;
+                top: 2em;
+                right: -70%;
+                /* Move it off-screen initially */
+                width: 50%;
+                height: 100%;
+                transition: right 0.5s ease;
+                z-index: 999;
+                background: rgba(255, 255, 255, 0);
+                /* Ensure it's visible */
+                overflow-y: auto;
+            }
+
+            .contact-form-menu.active {
+                right: 0;
+                /* Slide into view */
+            }
+
+            .contact-form-container {
+                text-align: left;
+                max-width: 600px;
+                margin: 0 auto;
+                padding: 20px;
+                background-color: #f9f9f9;
+                border-radius: 8px;
+                box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            }
+
+            .contact-form-container h2 {
+                font-size: 1.8em;
+                margin-bottom: 15px;
+                color: #333;
+            }
+
+            .contact-form-container p {
+                font-size: 1em;
+                margin-bottom: 25px;
+                color: #555;
+            }
+
+            .contact-form {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .form-group {
+                display: flex;
+                justify-content: space-between;
+                gap: 10px;
+                margin-bottom: 15px;
+            }
+
+            .form-group input {
+                flex: 1;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                font-size: 1em;
+            }
+
+            textarea {
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                font-size: 1em;
+                margin-bottom: 20px;
+            }
+
+            .submit-button {
+                background-color: green;
+                color: white;
+                padding: 12px 20px;
+                font-size: 1em;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                text-align: center;
+            }
+
+            .submit-button:hover {
+                background-color: rgb(114, 191, 14);
+            }
+        </style>
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-columns">
+                    <!-- About Us Section -->
+                    <div class="footer-column">
+                        <h3>Our Mission</h3>
+                        <p>At Unigold Foods, our mission is to provide high-quality, sustainable food products that
+                            support local farmers and contribute to the well-being of our communities. We strive to be a
+                            leader in the Nigerian food industry by innovating and maintaining ethical business
+                            practices.</p>
+                    </div>
+
+                    <!-- Services Section -->
+                    <div class="footer-column">
+                        <h3>Our Services</h3>
+                        <ul>
+                            <li><span class="arrow">&rarr;</span> Sustainable Livestock Sourcing</li>
+                            <li><span class="arrow">&rarr;</span> High-Quality Tomato Paste Production</li>
+                            <li><span class="arrow">&rarr;</span> Red Palm Oil Manufacturing</li>
+                            <li><span class="arrow">&rarr;</span> Community Empowerment Programs</li>
+                            <li><span class="arrow">&rarr;</span> Eco-friendly Agriculture Initiatives</li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact Info Section -->
+                    <div class="footer-column">
+                        <h3>Contact Us</h3>
+                        <ul class="contact-info">
+                            <li><i class="fas fa-map-marker-alt"></i> 1234 Unigold Street, Lagos, Nigeria</li>
+                            <li><i class="fas fa-envelope"></i> support@unigoldfoods.com</li>
+                            <li><i class="fas fa-phone"></i> +234 800 123 4567</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Footer Bottom -->
+                <div class="footer-bottom">
+                    <p>&copy; 2024 Unigold Foods. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+
+
+        <div class="arrow-box" onclick="scrollToTop()">
+            <div class="arrow-up"></div>
+        </div>
+
+        <div class="whatsapp-icon">
+            <i class="fab fa-whatsapp"></i>
+        </div>
+
+</body>
+</div>
+<script>
+    // script.js
+
+    window.addEventListener('load', () => {
+        const preloader = document.querySelector('.preloader');
+        const pageContent = document.querySelector('.page-content');
+
+        if (preloader && pageContent) {
+            setTimeout(() => {
+                preloader.style.opacity = '0';
+                preloader.style.transition = 'opacity 1s ease-out'; // Smooth fade-out transition
+
+                setTimeout(() => {
+                    preloader.style.display = 'none';
+                    pageContent.style.display = 'block'; // Show the page content
+                }, 1000); // Match this with the fade-out duration
+            }, 2000); // Preloader duration (3000ms = 3 seconds)
+        } else {
+            console.error('Preloader or page content not found');
+        }
+    });
+
+
+
+
+
+
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const mobileNav = document.getElementById('mobile-nav');
+        const overlay = document.createElement('div');
+        overlay.classList.add('overlay');
+
+        document.body.appendChild(overlay);
+
+        function toggleMobileNav() {
+            if (mobileNav.classList.contains('active')) {
+                mobileNav.classList.remove('active');
+                overlay.classList.remove('active');
+            } else {
+                mobileNav.classList.add('active');
+                overlay.classList.add('active');
+            }
+        }
+
+        document.querySelector('.hamburger').addEventListener('click', toggleMobileNav);
+
+        document.querySelector('.close-btn').addEventListener('click', () => {
+            if (mobileNav.classList.contains('active')) {
+                mobileNav.classList.remove('active');
+                overlay.classList.remove('active');
+            }
+        });
+
+        overlay.addEventListener('click', () => {
+            if (mobileNav.classList.contains('active')) {
+                mobileNav.classList.remove('active');
+                overlay.classList.remove('active');
+            }
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!mobileNav.contains(event.target) && !document.querySelector('.hamburger').contains(event.target)) {
+                if (mobileNav.classList.contains('active')) {
+                    mobileNav.classList.remove('active');
+                    overlay.classList.remove('active');
+                }
+            }
+        });
+    });
+
+
+
+
+
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+
+
+
+
+
+    $(".custom-carousel").owlCarousel({
+        autoWidth: true,
+        loop: true
+    });
+    $(document).ready(function () {
+        $(".custom-carousel .item").click(function () {
+            $(".custom-carousel .item").not($(this)).removeClass("active");
+            $(this).toggleClass("active");
+        });
+    });
+
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const contactButton = document.getElementById("contactButton");
+        const contactFormMenu = document.getElementById('contactFormMenu');
+
+        if (!contactButton || !contactFormMenu) {
+            console.error('Contact button or form menu not found.');
+            return;
+        }
+
+        // Open contact form menu
+        contactButton.onclick = function () {
+            contactFormMenu.classList.add('active');
+        };
+
+        // Function to close the form
+        function closeForm() {
+            contactFormMenu.classList.remove('active');
+        }
+
+        // Add event listener for clicks outside the container
+        document.addEventListener('click', function (event) {
+            // Check if the click is outside the contactFormMenu and contactButton
+            if (!contactFormMenu.contains(event.target) && !contactButton.contains(event.target)) {
+                closeForm();
+            }
+        });
+
+        // Prevent clicks inside the contactFormMenu from closing the menu
+        contactFormMenu.addEventListener('click', function (event) {
+            event.stopPropagation();
+        });
+    });
+</script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+
+
+.breadcrumb-bg {
+  background-image: url(../images/logo.png);
+}
+
+.breadcrumb-text p {
+  color: green;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+}
+
+.breadcrumb-text h1 {
+  font-size: 50px;
+  font-weight: 900;
+  color: #fff;
+  margin: 0;
+  margin-top: 20px;
+}
+
+.breadcrumb-section {
+  padding: 150px 0;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  z-index: 1;
+  background-attachment: fixed;
+  padding-top: 200px;
+}
+
+.breadcrumb-section:after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background-color: #000000ef;
+  z-index: -1;
+  opacity: 0.8;
+
+}
+
+
+
+/* -----------------------------------------------------------------------------
+
+# About Page Styles
+
+----------------------------------------------------------------------------- */
+.feature-bg {
+  position: relative;
+  margin: 150px 0;
+}
+
+.feature-bg:after {
+  background-image: url('../images/Product\ 10a.jpg');
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 40%;
+  height: 100%;
+  content: "";
+  background-size: cover;
+  background-position: center;
+  border-top-left-radius: 1em;
+  -webkit-box-shadow: 0 0 20px #cacaca;
+  box-shadow: 0 0 20px #cacaca;
+  border-bottom-left-radius: 1em;
+}
+@media (max-width: 768px) {
+  .feature-bg:after{
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .feature-bg:after{
+    display: none;
+  }
+  }
+
